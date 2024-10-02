@@ -31,7 +31,13 @@ namespace Levels
             colorConnectionManager.TryGetColorNodeInPosition(position, out var node);
             
             if (node != null)
+            {
                 EventsController.Fire(new EventModels.Game.NodeTapped());
+            }
+            else
+            {
+                EventsController.Fire(new EventModels.Game.NodeTappedNull());
+            }
         }
         
         private void OnPointerUp(Vector3 position)

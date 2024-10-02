@@ -11,6 +11,11 @@ namespace Events
                 
             }
 
+            public struct NodeTappedNull : IEvent
+            {
+
+            }
+
             public struct PlayerFingerRemoved : IEvent
             {
                 
